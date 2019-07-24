@@ -80,7 +80,7 @@ void do_one_file(const char *iname, char *oname) {
 #endif
     if (st.st_size <= 0)
         throwIOException("empty file -- skipped");
-    if (st.st_size < 512)
+    if (st.st_size < 1)
         throwIOException("file is too small -- skipped");
     if (!mem_size_valid_bytes(st.st_size))
         throwIOException("file is too large -- skipped");
